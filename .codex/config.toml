@@ -1,0 +1,13 @@
+# MCP de Azure DevOps para Codex (mismo servidor y .env que .mcp.json de Claude)
+[mcp_servers.azure-devops]
+command = "cmd"
+args = [
+  "/c", "npx", "-y", "dotenv-cli",
+  "-e", "D:/tech-and-solve/scrum-ia/.env",
+  "--",
+  "npx", "-y", "@azure-devops/mcp@2.9.0", "berand97",
+  "--authentication", "pat",
+]
+# La primera ejecución descarga los paquetes con npx
+startup_timeout_sec = 120
+tool_timeout_sec = 120
