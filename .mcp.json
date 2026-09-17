@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "azure-devops": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c", "npx", "-y", "dotenv-cli",
+        "-e", "D:/tech-and-solve/scrum-ia/.env",
+        "--",
+        "npx", "-y", "@azure-devops/mcp@2.9.0", "berand97",
+        "--authentication", "pat"
+      ]
+    }
+  }
+}
